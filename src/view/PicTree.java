@@ -41,7 +41,7 @@ public class PicTree extends JTree implements TreeSelectionListener
 					{
 						if(e.getClickCount() == 2 && getLastSelectedPathComponent().toString().equals("Add Folder"))
 						{
-							File f = new File(getFolderPath(self));
+							File f = new File(getFolderPath());
 		
 							if(f != null)
 							{
@@ -113,16 +113,14 @@ public class PicTree extends JTree implements TreeSelectionListener
         this.scrollPathToVisible(new TreePath(child.getPath()));
     }
 	
-	public static String getFolderPath(Component comp)
+	public static String getFolderPath()
 	{
 		JFileChooser choice = new JFileChooser();
 		String path = "";
-		int var = choice.showSaveDialog(comp);
-		if(var==JFileChooser.APPROVE_OPTION)
-		{
+		int var = choice.showSaveDialog(null);
+		if(var == JFileChooser.APPROVE_OPTION)
 		   path = choice.getCurrentDirectory().getAbsolutePath();
-		}
-		
+
 		return path;
 	}
 

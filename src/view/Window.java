@@ -417,10 +417,9 @@ public class Window extends JFrame implements KeyListener
 			menuBar.add(tools);
 			tools.add(export);
 			tools.add(clear);
-			JInternalFrame self = this;
 			export.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-							workPath = PicTree.getFolderPath(self);
+							workPath = PicTree.getFolderPath();
 							if(workPath != null)
 							{
 								if(setWorkspaceFolderAt(workPath) == 0)
