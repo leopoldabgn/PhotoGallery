@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
@@ -31,7 +30,6 @@ public class PicTree extends JTree implements TreeSelectionListener
 		this.win = win;
 		this.folderList = folderList;
 		this.rootList = rootList;
-		JTree self = this;
 		this.addTreeSelectionListener(this);
 		this.addMouseListener(new MouseAdapter() {
 			public void mouseReleased(MouseEvent e) {

@@ -65,9 +65,9 @@ public class Picture extends JPanel implements MouseListener
 				if(!temp)
 				{
 				    JComponent pic = (JComponent)e.getSource();
-				    //Du composant, on r�cup�re l'objet de transfert : le n�tre
+				    //Du composant, on recupere l'objet de transfert : le notre
 				    TransferHandler handle = pic.getTransferHandler();
-				    //On lui ordonne d'amorcer la proc�dure de drag'n drop
+				    //On lui ordonne d'amorcer la procedure de drag'n drop
 			        handle.exportAsDrag(pic, e, TransferHandler.COPY);
 			        temp = true;
 				}
@@ -415,7 +415,7 @@ public class Picture extends JPanel implements MouseListener
 		{
 	        BufferedImage inputImage = ImageIO.read(pic.getFile());
 	        String extension = PicContainer.getFileExtension(pic.getFile());
-	        String outputImagePath = path + "\\" + pic.getName();
+	        String outputImagePath = path + "/" + pic.getName();
 	        int width = pic.getImg().getWidth(null);
 	        int height = pic.getImg().getHeight(null);
 	        BufferedImage outputImage = new BufferedImage(width,
