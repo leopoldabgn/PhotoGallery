@@ -40,7 +40,6 @@ import javax.swing.event.InternalFrameEvent;
 import model.PicTransferHandler;
 import model.Preset;
 import model.Propreties;
-import view.PictureViewer;
 
 public class Window extends JFrame implements KeyListener
 {
