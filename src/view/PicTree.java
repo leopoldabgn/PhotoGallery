@@ -41,7 +41,7 @@ public class PicTree extends JTree implements TreeSelectionListener
 					{
 						if(e.getClickCount() == 2 && getLastSelectedPathComponent().toString().equals("Add Folder"))
 						{
-							File f = new File(getFolderPath());
+							File f = new File(getFolderPath("Select a directory", true));
 		
 							if(f != null)
 							{
@@ -113,13 +113,20 @@ public class PicTree extends JTree implements TreeSelectionListener
         this.scrollPathToVisible(new TreePath(child.getPath()));
     }
 	
-	public static String getFolderPath()
+	public static String getFolderPath(String title, boolean openOrSave)
 	{
-		JFileChooser choice = new JFileChooser();
+		JFileChooser jfc = new JFileChooser();
+		jfc.setDialogTitle(title);
+		jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
 		String path = "";
-		int var = choice.showSaveDialog(null);
+		int var;
+		if(openOrSave)
+			var = jfc.showOpenDialog(null);
+		else
+			var = jfc.showSaveDialog(null);
 		if(var == JFileChooser.APPROVE_OPTION)
-		   path = choice.getCurrentDirectory().getAbsolutePath();
+		   path = jfc.getSelectedFile().getAbsolutePath();
 
 		return path;
 	}
@@ -128,13 +135,13 @@ public class PicTree extends JTree implements TreeSelectionListener
 	{
 		//TreePath tree = new TreePath(this);
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) r;
-        System.out.println(root);
+        //System.out.println(root);
     	for (int i = 0; i < root.getChildCount(); i++)
     	{
     		if (root.getChildAt(i).isLeaf())
     		{
     			this.addSelectionPath(new TreePath(root.getChildAt(i)));
-    			System.out.println(root.getChildAt(i)+" "+new TreePath(root.getChildAt(i)));
+    			//System.out.println(root.getChildAt(i)+" "+new TreePath(root.getChildAt(i)));
     		}
     		else 
     			selectAllFolders(root.getChildAt(i));

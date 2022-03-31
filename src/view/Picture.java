@@ -186,14 +186,14 @@ public class Picture extends JPanel implements MouseListener
 		
 		copyTo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String path = PicTree.getFolderPath();
+				String path = PicTree.getFolderPath("Select a directory", false);
 				copyImg(self, path);
 			}
 		});
 		
 		moveTo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String path = PicTree.getFolderPath();
+				String path = PicTree.getFolderPath("Select a directory", false);
 				moveImg(self, path);
 			}
 		});

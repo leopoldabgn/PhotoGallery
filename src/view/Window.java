@@ -419,7 +419,7 @@ public class Window extends JFrame implements KeyListener
 			tools.add(clear);
 			export.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-							workPath = PicTree.getFolderPath();
+							workPath = PicTree.getFolderPath("Select a directory", false);
 							if(workPath != null)
 							{
 								if(setWorkspaceFolderAt(workPath) == 0)
