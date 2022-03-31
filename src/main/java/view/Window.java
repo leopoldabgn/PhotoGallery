@@ -40,6 +40,7 @@ import javax.swing.event.InternalFrameEvent;
 import model.PicTransferHandler;
 import model.Preset;
 import model.Propreties;
+import view.PictureViewer;
 
 public class Window extends JFrame implements KeyListener
 {
@@ -559,7 +560,7 @@ public class Window extends JFrame implements KeyListener
 			return false;
 		
 		int option = JOptionPane.showConfirmDialog(null, new InfoPan("Are you sure you want to permanently delete this file ?", pic), "Delete File", 
-				 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, new ImageIcon(getClass().getClassLoader().getResource("deleteFile.png")));
+				 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, new ImageIcon(PictureViewer.ICONS_FOLDER+"deleteFile.png"));
 
 		return option == JOptionPane.YES_OPTION ? true : false;
 	}

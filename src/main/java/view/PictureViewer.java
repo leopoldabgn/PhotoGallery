@@ -41,7 +41,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class PictureViewer extends JFrame implements KeyListener
 {
 	private static final long serialVersionUID = 1L;
-	
+	public static String ICONS_FOLDER = "src/resources/icons/";
+
 	private PicContainer pC;
 	private Panel pan;
 	private File picture;
@@ -145,7 +146,7 @@ public class PictureViewer extends JFrame implements KeyListener
 		private static final long serialVersionUID = 1L;
 		{
             putValue(Action.NAME, "Crop");
-            putValue(Action.SMALL_ICON, new ImageIcon(getClass().getClassLoader().getResource("crop.png")));
+            putValue(Action.SMALL_ICON, new ImageIcon(ICONS_FOLDER+"crop.png"));
             putValue(Action.MNEMONIC_KEY, KeyEvent.VK_K);
             putValue(Action.SHORT_DESCRIPTION, "Crop (CTRL+K)");
             putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_K, KeyEvent.CTRL_DOWN_MASK)); 
@@ -168,7 +169,7 @@ public class PictureViewer extends JFrame implements KeyListener
 		private static final long serialVersionUID = 1L;
 		{
             putValue(Action.NAME, "Filter");
-            putValue(Action.SMALL_ICON, new ImageIcon(getClass().getClassLoader().getResource("filter.png")));
+            putValue(Action.SMALL_ICON, new ImageIcon(ICONS_FOLDER+"filter.png"));
             putValue(Action.MNEMONIC_KEY, KeyEvent.VK_F);
             putValue(Action.SHORT_DESCRIPTION, "Filter (CTRL+F)");
             putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F, KeyEvent.CTRL_DOWN_MASK)); 
@@ -187,7 +188,7 @@ public class PictureViewer extends JFrame implements KeyListener
 		private static final long serialVersionUID = 1L;
 		{
             putValue(Action.NAME, "Paint");
-            putValue(Action.SMALL_ICON, new ImageIcon(getClass().getClassLoader().getResource("pencil.png")));
+            putValue(Action.SMALL_ICON, new ImageIcon(ICONS_FOLDER+"pencil.png"));
             putValue(Action.MNEMONIC_KEY, KeyEvent.VK_E);
             putValue(Action.SHORT_DESCRIPTION, "Filter (CTRL+E)");
             putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_E, KeyEvent.CTRL_DOWN_MASK)); 
@@ -205,7 +206,7 @@ public class PictureViewer extends JFrame implements KeyListener
     			}
     			else if(sys.toUpperCase().equals("LIN"))
     			{
-    				p = Runtime.getRuntime().exec("paint.jar "+picture);
+    				p = Runtime.getRuntime().exec("java -jar paint.jar "+picture);
     			}
     			if(p != null)
     				p.waitFor();
@@ -221,7 +222,7 @@ public class PictureViewer extends JFrame implements KeyListener
 		private static final long serialVersionUID = 1L;
 		{
             putValue(Action.NAME, "Delete");
-            putValue(Action.SMALL_ICON, new ImageIcon(getClass().getClassLoader().getResource("redCross.png")));
+            putValue(Action.SMALL_ICON, new ImageIcon(ICONS_FOLDER+"redCross.png"));
             putValue(Action.MNEMONIC_KEY, KeyEvent.VK_DELETE);
             putValue(Action.SHORT_DESCRIPTION, "Delete (DELETE)");
             putValue(Action.ACCELERATOR_KEY, KeyEvent.VK_DELETE); 
@@ -240,7 +241,7 @@ public class PictureViewer extends JFrame implements KeyListener
 		private static final long serialVersionUID = 1L;
 		{
             putValue(Action.NAME, "Reset");
-            putValue(Action.SMALL_ICON, new ImageIcon(getClass().getClassLoader().getResource("reset.png")));
+            putValue(Action.SMALL_ICON, new ImageIcon(ICONS_FOLDER+"reset.png"));
             putValue(Action.MNEMONIC_KEY, KeyEvent.VK_R);
             putValue(Action.SHORT_DESCRIPTION, "Reset (R)");
             putValue(Action.ACCELERATOR_KEY, KeyEvent.VK_R); 

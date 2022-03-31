@@ -115,7 +115,7 @@ public class Picture extends JPanel implements MouseListener
 		//if(img == null)
 		//{
 			if(type == 2)
-				img = new ImageIcon(this.getClass().getClassLoader().getResource("image.png")).getImage();
+				img = new ImageIcon(PictureViewer.ICONS_FOLDER+"image.png").getImage();
 			else
 				img = new ImageIcon(file.getAbsolutePath()).getImage();
 		//}
