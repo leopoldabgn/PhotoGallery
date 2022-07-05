@@ -196,7 +196,7 @@ public class PictureViewer extends JFrame implements KeyListener
         
         @Override public void actionPerformed(ActionEvent e) 
         {
-            System.out.println("Paint");
+            System.out.println("Launching paint.jar...");
     		try {
     			String sys = (System.getProperty("os.name")).substring(0, 3);
     			Process p = null;
