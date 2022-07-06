@@ -39,10 +39,10 @@ public class PicTransferHandler extends TransferHandler
 	    return false;
 	  }
 
-	  protected void exportDone(JComponent c, Transferable t, int action){
+	  protected void exportDone(JComponent c, Transferable t, int action) {
 	    if(action == COPY)
 	    {
-	    	System.out.println("DONE");
+	    	System.out.println("Exportation done.");
 	    }
 	  }
 

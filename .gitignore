@@ -30,3 +30,6 @@ bin/
 
 # target
 target/
+
+# releases
+releases/

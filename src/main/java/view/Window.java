@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -14,6 +15,7 @@ import java.awt.event.MouseWheelEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -320,8 +322,10 @@ public class Window extends JFrame implements KeyListener
 			if(option == JOptionPane.OK_OPTION)
 			{
 				preset.savePreset(this);
+				/*
 				for(File f : rootList)
 					System.out.println(f);
+				*/
 				this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
 			}
 			break;
@@ -423,9 +427,9 @@ public class Window extends JFrame implements KeyListener
 							if(workPath != null && !workPath.isEmpty())
 							{
 								if(setWorkspaceFolderAt(workPath) == 0)
-									System.out.println("DONE");
+									System.out.println("Workspace has been set : "+workPath);
 								else
-									System.out.println("EROR : CAN'T CREATE WORKSPACE FOLDER");
+									System.out.println("ERROR : CAN'T CREATE WORKSPACE FOLDER");
 							}
 				}
 			});
@@ -559,7 +563,7 @@ public class Window extends JFrame implements KeyListener
 			return false;
 		
 		int option = JOptionPane.showConfirmDialog(null, new InfoPan("Are you sure you want to permanently delete this file ?", pic), "Delete File", 
-				 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, new ImageIcon(PictureViewer.ICONS_FOLDER+"deleteFile.png"));
+				 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, new ImageIcon(Window.getImage(PictureViewer.ICONS_FOLDER+"deleteFile.png")));
 
 		return option == JOptionPane.YES_OPTION ? true : false;
 	}
@@ -684,4 +688,10 @@ public class Window extends JFrame implements KeyListener
 		return new int[] {split.getDividerLocation(), split2.getDividerLocation()};
 	}
 	
+	public static Image getImage(final String pathAndFileName)
+	{
+		final URL url = Thread.currentThread().getContextClassLoader().getResource(pathAndFileName);
+		return Toolkit.getDefaultToolkit().getImage(url);
+	}
+
 }

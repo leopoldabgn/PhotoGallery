@@ -190,7 +190,7 @@ public class PicPanel extends JPanel
 		{
 			if(!folderList.contains(folder))
 			{
-				System.out.println("Adding --> "+folder.getName());
+				//System.out.println("Adding --> "+folder.getName());
 				folderList.add(folder);
 			}
 
@@ -198,7 +198,7 @@ public class PicPanel extends JPanel
 			{
 				if(PicContainer.checkFolderImg(folder) || allFolders)
 				{
-					System.out.println(allFolders);
+					//System.out.println(allFolders);
 					picList.add(new PicContainer(win, folder, allFolders));
 					this.add(picList.get(picList.size()-1));
 					this.getComponent(this.getComponentCount()-1).setVisible(false);

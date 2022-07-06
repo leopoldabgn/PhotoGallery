@@ -117,7 +117,7 @@ public class Preset implements Serializable
 			pP.setPicContainer(preset.getLastPicContainerFolder(), preset.getLastPicContainerBool());
 			lastPicContainerFolder = preset.getLastPicContainerFolder();
 			lastPicContainerBool  = preset.getLastPicContainerBool();
-			System.out.println("////Save PicContainer//// --> "+this.getLastPicContainerFolder());
+			//System.out.println("////Save PicContainer//// --> "+this.getLastPicContainerFolder());
 		}
 		if(preset.getSizeSliderVal() > 0 && preset.getSizeSliderVal() <= 100)
 		{

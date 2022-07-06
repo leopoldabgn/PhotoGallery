@@ -115,7 +115,7 @@ public class Picture extends JPanel implements MouseListener
 		//if(img == null)
 		//{
 			if(type == 2)
-				img = new ImageIcon(PictureViewer.ICONS_FOLDER+"image.png").getImage();
+				img = Window.getImage(PictureViewer.ICONS_FOLDER+"image.png");
 			else
 				img = new ImageIcon(file.getAbsolutePath()).getImage();
 		//}
@@ -308,7 +308,7 @@ public class Picture extends JPanel implements MouseListener
 		}
 		selectedImg = this;
 		repaint();	
-		System.out.println(this.getName());
+		//System.out.println(this.getName());
 		win.requestFocus();
 		if(e.getButton() == MouseEvent.BUTTON3)
 			popMenu.show(win.getPicPanel().getActualPicContainer(), getX()+e.getX(), getY()+e.getY());

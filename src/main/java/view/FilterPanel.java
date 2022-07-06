@@ -205,7 +205,6 @@ public class FilterPanel extends JPanel
 		if(pV != null)
 		{
 			pV.applyFilter(getFilterNb(Thumbnail.selectedThumbnail));
-			System.out.println("un testsetsetsetest");
 		}
 	}
 	

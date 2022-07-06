@@ -61,7 +61,7 @@ public class PropretiesFrame extends JFrame
 			g.drawString(prop.getName(), x, y);
 			g.drawString("File type: "+prop.getExtension(), x, y+coeff);
 			g.drawString("File Dimension: "+prop.getImgWidth()+"x"+prop.getImgHeight(), x, y+coeff*2);
-			g.drawString("Date created: "+prop.creationTime(), x, y+coeff*3);
+			g.drawString("Creation date: "+prop.creationTime(), x, y+coeff*3);
 			String str = prop.size();
 			if(str.length() >= 2 && isNumber(str.charAt(str.length()-2)))
 				g.drawString("Size: "+prop.binSize(), x, y+coeff*4);
