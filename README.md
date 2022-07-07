@@ -48,6 +48,13 @@ Otherwise, you can of course close it if you don't need it. To reopen it later, 
 - File : Go to Preset explanation to get further informations.
 - Tools -> Open Workspace : To open the workspace
 
+With the second toolbar, you can:
+- Reduce or enlarge the size of the images using the slider.
+- see only the detail of the images by clicking on "only details". If your computer is too slow, this option can be very practical. This makes it easy to load images.
+![Capture d’écran du 2022-07-07 13-09-31](https://user-images.githubusercontent.com/95108507/177760015-bdcfe828-392c-49b4-8896-6a800b5172ce.png)
+
+- You can sort images by multiple criteria.
+
 ### Images
 You can select an image by clicking once on it then use the arrows to go from left to right. If you double click on an image, you will enter the PictureViewer. (Or press ENTER).  
 You can also right click on the image to:
