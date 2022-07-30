@@ -2,18 +2,24 @@
 Photo Gallery coded in java
 
 ## INSTALLATION
-You can download the last release. There is a tar or zip file. untar/unzip the folder and execute the command :
+You can download the last release. There is a tar or zip file. untar/unzip the folder and execute the command :  
+```
 java -jar photoGallery.jar
+```
 
 Otherwise you can download the source code and compile it yourself. This is a maven project. So you can run the following command to compile:
 mvn package
 
-Then the jar created is in the "./target" folder. It must be moved to the folder above which contains "paint.jar":
+Then the jar created is in the "./target" folder. It must be moved to the folder above which contains **paint.jar** :
+```
 mv target/photoGallery.jar ../
+```
 
 Launch the photo gallery:
-cd..
+```
+cd ..
 java -jar photoGallery.jar
+```
 
 ## HOW TO USE
 ### Add a folder
@@ -76,7 +82,7 @@ It allows you to observe images and modify them. You can :
   
 ![Capture d’écran du 2022-07-07 12-50-45](https://user-images.githubusercontent.com/95108507/177757688-f1d13e2a-9861-45f4-80f5-93ffbafff827.png)
 
-- Paint: The pencil button will allow you to open your image in an image editor that I created (paint.jar). Once inside you can draw on the image or modify it. Then save it. I invite you to see the link to this project: **paint.jar**  
+- Paint: The pencil button will allow you to open your image in an image editor that I created (paint.jar). Once inside you can draw on the image or modify it. Then save it. I invite you to see the link to this project: [Paint](https://www.github.com/leopoldabgn/Paint.git)
   
 ![Capture d’écran du 2022-07-07 12-58-45](https://user-images.githubusercontent.com/95108507/177758156-51eac8cc-0b9b-44b2-be78-47a12b2fbfc1.png)
 
